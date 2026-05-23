@@ -101,6 +101,8 @@ section{
 }
 
 .home-content h1{
+    position: relative;
+    display: inline-block;
     font-size: 5.6rem;
     font-weight: 700;
     line-height: 1.3;
@@ -142,6 +144,7 @@ section{
 }
 
 .home-content p{
+    position: relative;
     font-size: 1.6rem;
     margin: 2rem 0 4rem;
 }
@@ -278,6 +281,7 @@ section{
 }
 
 .heading{
+    position: relative;
     font-size: 5rem;
     margin-bottom: 3rem;
     text-align: center;
@@ -323,10 +327,13 @@ span{
 }
 
 .about-content h3{
+    position: relative;
+    display: inline-block;
     font-size: 2.6rem;
 }
 
 .about-content p{
+    position: relative;
     font-size: 1.6rem;
     margin: 2rem 0 3rem;
 }
@@ -360,11 +367,14 @@ span{
 }
 
 .education-column .title{
+    position: relative;
+    display: inline-block;
     font-size: 2.5rem;
     margin: 0 0 1.5rem 2rem;
 }
 
 .education-column .education-box{
+    position: relative;
     border-left: .2rem solid var(--main-color);
 }
 
@@ -669,11 +679,32 @@ span{
     background: yellowgreen;
 }
 
+.animate.home-img{
+    width: 100%;
+}
+
 .logo .animate,
 .navbar .animate,
-#menu-icon .animate{
+#menu-icon .animate,
+.home.show-animate .animate{
     animation: showRight 1s ease forwards;
     animation-delay: calc(.3s * var(--i));
+}
+
+.animate.scroll{
+    transition: 1s ease;
+    transition-delay: calc(.3s / var(--i));
+    animation: none;
+}
+
+.education .education-box .animate.scroll{
+    width: 105%;
+}
+
+.about.show-animate .animate.scroll,
+.education.show-animate .animate.scroll{
+    transition-delay: calc(.3s * var(--i));
+    width: 0;
 }
 
 @media (max-width: 1200px) {
